@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-from app.ai_engine import generate_summary
-from app.data_manager import load_data, save_data
+from ai_engine import generate_summary
+from data_manager import load_data, save_data
 
 def show_dashboard():
     st.title("📊 Portfolio Intelligence Dashboard")

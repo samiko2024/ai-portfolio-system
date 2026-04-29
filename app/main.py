@@ -1,7 +1,6 @@
 import streamlit as st
-from app.auth import login, check_auth
-from app.dashboard import show_dashboard
-
+from auth import login, check_auth
+from dashboard import show_dashboard
 st.set_page_config(
     page_title="AI Portfolio System",
     layout="wide"
