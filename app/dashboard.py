@@ -3,6 +3,9 @@ import pandas as pd
 from ai_engine import generate_summary
 from data_manager import load_data, save_data
 
+if st.button("Test Click"):
+    st.write("✅ Button is working")
+
 def show_dashboard():
     st.title("📊 Portfolio Intelligence Dashboard")
 
