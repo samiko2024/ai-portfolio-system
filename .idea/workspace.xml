@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d81f6b4e-4c14-45fc-addb-8674a9bfdbaa" name="Changes" comment="AI Portfolio System" />
+    <list default="true" id="d81f6b4e-4c14-45fc-addb-8674a9bfdbaa" name="Changes" comment="AI Portfolio System">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.streamlit/config.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.streamlit/secrets.toml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +45,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell\PycharmProjects\agentic-ai-pr1\.venv" />
       <recent name="C:\Users\Dell\PycharmProjects\agentic-ai-pr1" />
     </key>
   </component>
