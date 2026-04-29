@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="d81f6b4e-4c14-45fc-addb-8674a9bfdbaa" name="Changes" comment="AI Portfolio System">
 <<<<<<< HEAD
 =======
@@ -19,6 +20,11 @@
 =======
     <list default="true" id="d81f6b4e-4c14-45fc-addb-8674a9bfdbaa" name="Changes" comment="AI Portfolio System" />
 >>>>>>> 76f4fa6 (Fix module import issue)
+=======
+    <list default="true" id="d81f6b4e-4c14-45fc-addb-8674a9bfdbaa" name="Changes" comment="AI Portfolio System">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+>>>>>>> 432ea1d (Update config and fixes)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
