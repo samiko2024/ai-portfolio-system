@@ -1,38 +1,44 @@
 import streamlit as st
 import pandas as pd
 from app.ai_engine import generate_summary
-
-def load_data():
-    return pd.read_csv("data/data.csv")
+from app.data_manager import load_data, save_data
 
 def show_dashboard():
-    df = load_data()
-
     st.title("📊 Portfolio Intelligence Dashboard")
 
-    # --- KPI ROW ---
+    # --- LOAD DATA ---
+    df = load_data()
+
+    # --- FILE UPLOAD ---
+    uploaded_file = st.file_uploader("Upload Portfolio CSV", type=["csv"])
+
+    if uploaded_file is not None:
+        new_df = pd.read_csv(uploaded_file)
+
+        required_cols = {"name", "kpi_progress", "capital_deployed", "risk_level"}
+
+        if not required_cols.issubset(new_df.columns):
+            st.error("CSV must contain: name, kpi_progress, capital_deployed, risk_level")
+        else:
+            df = new_df
+            save_data(df)  # 💾 persist
+            st.success("Data uploaded and saved successfully")
+
+    # --- KPI METRICS ---
     total_capital = df["capital_deployed"].sum()
     avg_kpi = df["kpi_progress"].mean()
     high_risk_count = df[df["risk_level"] == "High"].shape[0]
 
     col1, col2, col3 = st.columns(3)
-
     col1.metric("💰 Total Capital", f"${total_capital:,.0f}")
     col2.metric("📈 Avg KPI", f"{avg_kpi:.1f}%")
     col3.metric("⚠️ High Risk", high_risk_count)
 
     st.divider()
 
-    # --- CHART + TABLE ---
-    col4, col5 = st.columns([2, 1])
-
-    with col4:
-        st.subheader("KPI Performance")
-        st.bar_chart(df.set_index("name")["kpi_progress"])
-
-    with col5:
-        st.subheader("Risk Breakdown")
-        st.write(df["risk_level"].value_counts())
+    # --- CHART ---
+    st.subheader("KPI Performance")
+    st.bar_chart(df.set_index("name")["kpi_progress"])
 
     st.divider()
 
@@ -67,3 +73,11 @@ def show_dashboard():
 
         else:
             st.write(summary)
+
+            # --- DOWNLOAD ---
+    st.download_button(
+        label="Download Current Data",
+        data=df.to_csv(index=False),
+        file_name="portfolio_data.csv",
+        mime="text/csv"
+    )
