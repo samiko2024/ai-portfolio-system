@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="d81f6b4e-4c14-45fc-addb-8674a9bfdbaa" name="Changes" comment="AI Portfolio System">
 <<<<<<< HEAD
 =======
@@ -15,6 +16,9 @@
       <change beforePath="$PROJECT_DIR$/.streamlit/configs.toml" beforeDir="false" />
 >>>>>>> 9191176 (Fix module import issue)
     </list>
+=======
+    <list default="true" id="d81f6b4e-4c14-45fc-addb-8674a9bfdbaa" name="Changes" comment="AI Portfolio System" />
+>>>>>>> 76f4fa6 (Fix module import issue)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
