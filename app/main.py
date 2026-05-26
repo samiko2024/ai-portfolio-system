@@ -5,7 +5,6 @@ st.set_page_config(
     page_title="AI Portfolio System",
     layout="wide"
 )
-
 # Custom CSS (simple but powerful)
 st.markdown("""
     <style>
